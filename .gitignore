@@ -1,1 +1,6 @@
-.svn
+net_traffic_grapher.conf
+cache/**/*
+*.log
+*.log.LCK
+*.rrd
+.svn/
