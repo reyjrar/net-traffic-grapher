@@ -18,6 +18,7 @@ requires 'Config::General'; # This should reflect the config file format you've 
 requires 'RRDs';
 requires 'EV';
 requires 'POE';
+requires 'File::Find::Rule';
 requires 'POE::Loop::EV';
 requires 'POE::Component::Logger';
 requires 'POE::Component::Pcap';
