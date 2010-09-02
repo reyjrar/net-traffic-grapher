@@ -1,0 +1,46 @@
+# rename this file to net::traffic::grapher.yml and put a ':' after 'name' if
+# you want to use YAML like in old versions of Catalyst
+name net::traffic::grapher
+log_cfg ./conf/logging.conf
+<rrd>
+dir ./cache/rrd
+</rrd>
+<pcap>
+device any
+promisc 0
+snaplen 1518
+timeout 100
+# On my 64bit system, all of a sudden, all libpcap
+# packets are shifted 2 bytes to the right.  I'll include
+# a tool to figure this problem out.
+offset 0
+</pcap>
+<services>
+	<tcp>
+		21 ftp
+		22 ssh
+		80 http
+		137 netbios
+		389 ldap
+		443 https
+		445 netbios
+		514 syslog
+		636 ldap
+		1514 ossec
+		3306 mysql
+		5432 postgres
+		9514 eris
+	</tcp>
+	<udp>
+		53 dns
+		67 dhcp
+		68 dhcp
+		161 snmp
+		137 netbios
+		138 netbios
+		139 netbios
+		514 syslog
+		631 cups
+		1514 ossec
+	</udp>
+</services>

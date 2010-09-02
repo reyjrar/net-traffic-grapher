@@ -1,0 +1,9 @@
+<table class="span-17 last">
+% foreach my $span (qw( halfday day week month ) ) {
+<tr>
+	<td><img src="<% $c->uri_for("/rrd/syslog/total/view/bytes/$span")%>" alt="Syslog Bytes Overview"/></td>
+	<td><img src="<% $c->uri_for("/rrd/syslog/total/view/packets/$span")%>" alt="Syslog Packets Overview"/></td>
+</tr>
+% }
+</table>
+
