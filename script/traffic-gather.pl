@@ -37,7 +37,7 @@ my $CONFIG_FILE = File::Spec->catfile( "$FindBin::Bin", "..", "net_traffic_graph
 #
 # Application Settings
 my %CONFIG = ParseConfig( $CONFIG_FILE );
-$CONFIG{stats}=15;
+$CONFIG{stats} ||= 60;
 
 
 #
