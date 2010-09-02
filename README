@@ -7,7 +7,7 @@ INSTALL:
 	$EDITOR net_traffic_grapher.conf
 
 	# Run the Traffic Collector
-	./script/traffic-collector.pl
+	./script/traffic-gather.pl
 
 	# Startup the Web Application
 	./script/net_traffic_grapher_server.pl
